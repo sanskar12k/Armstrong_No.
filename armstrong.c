@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int order(int n){ //Returns the no. of digit in a given no.
+int order(int n){ //Returns the no. of digits in a given no.
 
      int i;
            for( i=0; n != 0;i++)
@@ -26,7 +26,7 @@ int armstrong(int n) { //Returns 1 if a given no. is armstrong
     int j;
     int sum = 0;
     int x;
-      for ( j = n;j!=0; j = j / 10) {
+      for ( j = n;j!=0; j /= 10) {
         int r = j % 10;
         sum += power(r, i);
     }
@@ -42,7 +42,7 @@ int armstrong(int n) { //Returns 1 if a given no. is armstrong
 
 
 int main() {
-    int i,j,k,n;
+    int i,n;
     printf("Enter the value of n: ");
     scanf("%d" ,&n);
      i = order (n);  
@@ -53,4 +53,5 @@ int main() {
             printf("%d " ,smallestNo);
         }
     }
+    return 0;
 }
